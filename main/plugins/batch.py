@@ -103,24 +103,24 @@ async def cancel(event):
     
 async def run_batch(userbot, client, sender, countdown, link):
     for i in range(len(ids)):
-        timer = 6
+        timer = 10
         if i < 250:
-            timer = 2
+            timer = 16
         elif i < 1000 and i > 100:
-            timer = 3
+            timer = 18
         elif i < 10000 and i > 1000:
-            timer = 4
+            timer = 20
         elif i < 50000 and i > 10000:
-            timer = 5
+            timer = 22
         elif i < 100000 and i > 50000:
-            timer = 6
+            timer = 24
         elif i < 200000 and i > 100000:
-            timer = 8
+            timer = 26
         elif i < 1000000: 
-            timer = 10
+            timer = 28
         
         if 't.me/c/' not in link:
-            timer = 1 if i < 500 else 2
+            timer = 10 if i < 500 else 2
         try: 
             count_down = f"**Batch process ongoing.**\n\nProcess completed: {i+1}"
             #a =ids[i]
