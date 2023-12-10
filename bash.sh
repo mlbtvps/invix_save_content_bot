@@ -1,2 +1,2 @@
 echo "starting Bot ~@save_restricted";
-python3 -m main
+flask run -h 0.0.0.0 -p 8080 & python3 -m main
